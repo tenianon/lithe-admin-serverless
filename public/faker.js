@@ -110,10 +110,11 @@ function getFakerUserForm() {
 function handler(req, res) {
     if (req.method === 'GET') {
         if (req.query.limit) {
+            const limit = Number(req.query.limit) >= 300 ? 300 : Number(req.query.limit);
             return res.json({
                 code: 200,
                 message: 'success',
-                data: getFakerUserList(Number(req.query.limit)),
+                data: getFakerUserList(limit),
             });
         }
         else {
