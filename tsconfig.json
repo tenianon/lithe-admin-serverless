@@ -2,9 +2,8 @@
   "compilerOptions": {
     "target": "esnext",
     "module": "nodenext",
-    "allowImportingTsExtensions": true,
-    "rewriteRelativeImportExtensions": true,
-    "verbatimModuleSyntax": false
+    "rootDir": "./api",
+    "outDir": "./public"
   },
-  "include": ["api"]
+  "include": ["api/**/*"]
 }
