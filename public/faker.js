@@ -6,9 +6,9 @@ exports.default = handler;
 const faker_1 = require("@faker-js/faker");
 function getFakerUserList(limit) {
     return Array.from({ length: Number(limit) }).map(() => ({
-        id: faker_1.fakerZH_CN.number.int({ min: 1, max: 1000 }),
+        number: faker_1.fakerZH_CN.number.int({ min: 1, max: 1000 }),
         fullName: faker_1.fakerZH_CN.person.fullName(),
-        key: faker_1.fakerZH_CN.string.uuid(),
+        id: faker_1.fakerZH_CN.string.uuid(),
         sex: faker_1.fakerZH_CN.person.sex(),
         age: faker_1.fakerZH_CN.number.int({ min: 18, max: 65 }),
         email: faker_1.fakerZH_CN.internet.email(),
@@ -19,8 +19,8 @@ function getFakerUserList(limit) {
         children: Array.from({
             length: faker_1.fakerZH_CN.number.int({ min: 0, max: 3 }),
         }).map(() => ({
-            id: faker_1.fakerZH_CN.number.int({ min: 2000, max: 10000 }),
-            key: faker_1.fakerZH_CN.string.uuid(),
+            number: faker_1.fakerZH_CN.number.int({ min: 2000, max: 10000 }),
+            id: faker_1.fakerZH_CN.string.uuid(),
             fullName: faker_1.fakerZH_CN.person.fullName(),
             age: faker_1.fakerZH_CN.number.int({ min: 1, max: 17 }),
             sex: faker_1.fakerZH_CN.person.sex(),
