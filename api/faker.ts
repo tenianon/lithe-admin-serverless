@@ -3,9 +3,9 @@ import { fakerZH_CN as faker } from '@faker-js/faker'
 
 export function getFakerUserList(limit: number) {
   return Array.from({ length: Number(limit) }).map(() => ({
-    id: faker.number.int({ min: 1, max: 1000 }),
+    number: faker.number.int({ min: 1, max: 1000 }),
     fullName: faker.person.fullName(),
-    key: faker.string.uuid(),
+    id: faker.string.uuid(),
     sex: faker.person.sex(),
     age: faker.number.int({ min: 18, max: 65 }),
     email: faker.internet.email(),
@@ -16,8 +16,8 @@ export function getFakerUserList(limit: number) {
     children: Array.from({
       length: faker.number.int({ min: 0, max: 3 }),
     }).map(() => ({
-      id: faker.number.int({ min: 2000, max: 10000 }),
-      key: faker.string.uuid(),
+      number: faker.number.int({ min: 2000, max: 10000 }),
+      id: faker.string.uuid(),
       fullName: faker.person.fullName(),
       age: faker.number.int({ min: 1, max: 17 }),
       sex: faker.person.sex(),
